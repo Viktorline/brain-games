@@ -45,12 +45,31 @@ make install
 ### Commands for launching
 
 1. Definition of an even number.
-   $ brain-even
+
+```bash
+brain-even
+```
+
 2. Calculator. Arithmetic expressions to be evaluated.
-   $ brain-calc
+
+```bash
+brain-calc
+```
+
 3. Finding the Greatest Common Divisor.
-   $ brain-gcd
+
+```bash
+brain-gcd
+```
+
 4. Progression. Search for missing numbers in a sequence of numbers.
-   $ brain-progression
+
+```bash
+brain-progression
+```
+
 5. Definition of a prime number.
-   $ brain-prime
+
+```bash
+brain-prime
+```
