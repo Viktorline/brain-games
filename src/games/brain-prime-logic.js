@@ -24,7 +24,7 @@ function isPrime(number) {
 }
 
 function newRound() {
-  const question = getRandom(1, 100);
+  const question = getRandom(1, 20);
   const answer = isPrime(question);
   return [question, answer];
 }
