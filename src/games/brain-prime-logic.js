@@ -1,9 +1,9 @@
-import { getRandom } from '../functions.js';
+import { getRandom } from '../helpers.js';
 import startGame from '../index.js';
 
-const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function isPrime(number) {
+function prime(number) {
   if (number < 2) {
     return 'no';
   }
@@ -25,12 +25,12 @@ function isPrime(number) {
 
 function newRound() {
   const question = getRandom(1, 20);
-  const answer = isPrime(question);
+  const answer = prime(question);
   return [question, answer];
 }
 
 function brainPrime() {
-  startGame(gameRule, newRound);
+  startGame(description, newRound);
 }
 
 export default brainPrime;

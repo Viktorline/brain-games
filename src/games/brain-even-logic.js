@@ -1,16 +1,16 @@
-import { getRandom, isEven } from '../functions.js';
+import { getRandom, even } from '../helpers.js';
 import startGame from '../index.js';
 
-const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function newRound() {
   const question = getRandom(1, 10);
-  const answer = isEven(question);
+  const answer = even(question);
   return [question, answer];
 }
 
 function brainEven() {
-  startGame(gameRule, newRound);
+  startGame(description, newRound);
 }
 
 export default brainEven;
