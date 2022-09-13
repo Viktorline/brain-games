@@ -19,7 +19,7 @@ function calculate(operation, firstNumber, secondNumber) {
 }
 
 function newRound() {
-  const operation = operations[Math.floor(Math.random() * operations.length - 1)];
+  const operation = operations[getRandom(0, 2)];
   const firstNumber = getRandom(1, 50);
   const secondNumber = getRandom(1, 50);
   const question = `${firstNumber} ${operation} ${secondNumber}`;
