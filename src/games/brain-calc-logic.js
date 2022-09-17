@@ -1,4 +1,4 @@
-import { getRandom } from '../helpers.js';
+import getRandom from '../helpers.js';
 import startGame from '../index.js';
 
 const description = 'What is the result of the expression?';
@@ -18,7 +18,7 @@ function calculate(operation, firstNumber, secondNumber) {
   return 'error';
 }
 
-function newRound() {
+function getQuestionAndAnswer() {
   const operation = operations[getRandom(0, 2)];
   const firstNumber = getRandom(1, 50);
   const secondNumber = getRandom(1, 50);
@@ -28,7 +28,7 @@ function newRound() {
 }
 
 function brainEven() {
-  startGame(description, newRound);
+  startGame(description, getQuestionAndAnswer);
 }
 
 export default brainEven;

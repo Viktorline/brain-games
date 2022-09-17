@@ -1,4 +1,4 @@
-import { getRandom } from '../helpers.js';
+import getRandom from '../helpers.js';
 import startGame from '../index.js';
 
 const description = 'What number is missing in the progression?';
@@ -14,16 +14,16 @@ function getProgression(firstNumber, arrayLength, d) {
   return [result, findMe];
 }
 
-function newRound() {
+function getQuestionAndAnswer() {
   const firstNumber = getRandom(1, 100);
   const arrayLength = getRandom(5, 10);
   const hiddenNumberIndex = getRandom(1, 10);
-  const [array, findMe] = getProgression(firstNumber, arrayLength, hiddenNumberIndex);
-  const answer = String(findMe);
-  return [array, answer];
+  const [question, currentAnswer] = getProgression(firstNumber, arrayLength, hiddenNumberIndex);
+  const answer = String(currentAnswer);
+  return [question, answer];
 }
 function brainProgression() {
-  startGame(description, newRound);
+  startGame(description, getQuestionAndAnswer);
 }
 
 export default brainProgression;
